@@ -7,7 +7,6 @@ var mount = require('mount-routes')
 
 var app = express()
 
-
 /**
  *
  * 公共系统初始化
@@ -122,6 +121,8 @@ app.use(function (req, res, next) {
   res.sendResult(null, 404, 'Not Found')
 })
 
-app.listen(8889)
+app.listen(8889, () => {
+  console.log('Server running at http://localhost:8889')
+})
 
 module.exports = app
